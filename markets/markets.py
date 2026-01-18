@@ -1,8 +1,10 @@
 """EMH testing utilities for the markets note.
 
+(c) Dr. Yves J. Hilpisch, The Python Quants GmbH.
+
 This module provides reusable functions for weak-form market efficiency tests.
 It is designed to work with a companion notebook (markets.ipynb) that handles
-data loading, visualization, and interactive exploration.
+data loading, visualization, and interactive exploration in the CPF Program.
 """
 
 from __future__ import annotations
@@ -400,4 +402,3 @@ def plot_suite(
 
     fig.tight_layout()  # adjust layout for readability
     plt.show()
-
