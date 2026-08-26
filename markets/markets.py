@@ -1,6 +1,9 @@
-"""EMH testing utilities for the markets note.
-
-(c) Dr. Yves J. Hilpisch, The Python Quants GmbH.
+"""Efficient Markets Hypothesis -- Theory and Tests
+CPF Bridge
+(c) Dr. Yves J. Hilpisch
+AI-Powered by different LLMs
+The Python Quants GmbH | https://tpq.io
+https://hilpisch.com | https://linktr.ee/dyjh
 
 This module provides reusable functions for weak-form market efficiency tests.
 It is designed to work with a companion notebook (markets.ipynb) that handles
@@ -132,8 +135,7 @@ def runs_test(returns: pd.Series) -> Dict[str, float]:
     n = n_pos + n_neg  # total number of observations
     mu_r = 1.0 + 2.0 * n_pos * n_neg / n  # expected number of runs
     var_r = (
-        2.0 * n_pos * n_neg * (2.0 * n_pos * n_neg - n)
-        / (n * n * (n - 1.0))
+        2.0 * n_pos * n_neg * (2.0 * n_pos * n_neg - n) / (n * n * (n - 1.0))
     )  # variance of runs
 
     z_stat = (runs - mu_r) / np.sqrt(var_r)  # standardized test statistic
@@ -175,9 +177,13 @@ def variance_ratio(
 
         # build non-overlapping q-period sums
         n_block = clean.shape[0] // q_int  # number of full blocks
-        reshaped = clean.iloc[: n_block * q_int].to_numpy().reshape(
-            n_block,
-            q_int,
+        reshaped = (
+            clean.iloc[: n_block * q_int]
+            .to_numpy()
+            .reshape(
+                n_block,
+                q_int,
+            )
         )  # blocks of length q_int
         summed = reshaped.sum(axis=1)  # q-period returns
         var_q = float(np.var(summed, ddof=1))  # sample variance of q-period sum
@@ -193,8 +199,8 @@ def variance_ratio(
 
 def predictability_regression(
     returns: pd.Series,
-    p: int=1,
-    hac_lags: int=5,
+    p: int = 1,
+    hac_lags: int = 5,
 ) -> pd.Series:
     """Estimate an autoregression of returns with HAC-robust inference.
 
@@ -245,8 +251,8 @@ def predictability_regression(
 
 def oos_forecast_eval(
     returns: pd.Series,
-    window: int=252,
-    costs_bps: float=2.0,
+    window: int = 252,
+    costs_bps: float = 2.0,
 ) -> Dict[str, float]:
     """Evaluate a simple rolling AR(1) forecast and toy trading strategy.
 
@@ -369,7 +375,7 @@ def efficiency_scorecard(
 def plot_suite(
     prices: pd.Series,
     returns: pd.Series,
-    title: Optional[str]=None,
+    title: Optional[str] = None,
 ) -> None:
     """Plot a basic diagnostic suite for prices and returns.
 

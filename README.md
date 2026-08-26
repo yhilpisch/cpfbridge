@@ -19,6 +19,7 @@ The code resources here mirror the corresponding bridge notes:
 - `covariance/covariance.ipynb` — covariance matrix geometry, ellipses, eigenvalues, and portfolio variance in a two-asset world.
 - `ftap/ftap.ipynb` — finite-state, one-period FTAP with explicit two- and three-state examples and price bounds.
 - `markets/markets.ipynb` and `markets/markets.py` — Efficient Markets Hypothesis, weak-form tests, and reusable EMH diagnostics in Python.
+- `markets/data/eoddata.csv` and its metadata sidecar — the bundled end-of-day snapshot used for offline diagnostics.
 
 You can open any notebook in Jupyter or Google Colab and step through the cells alongside the associated PDF notes and slide decks.
 
