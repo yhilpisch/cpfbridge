@@ -50,7 +50,7 @@ Some examples may reference third‑party libraries, datasets, services, or APIs
 
 - Email: team@tpq.io
 - Linktree: https://linktr.ee/dyjh
-- CPF Program: https://python-for-finance.com
+- CPF Program: https://cpfprogram.com
 - The AI Engineer: https://theaiengineer.dev
 - The Crypto Engineer: https://thecryptoengineer.dev
 - The Data Scientist: https://thedatascientist.dev
