@@ -4,27 +4,41 @@
   <img src="https://hilpisch.com/tpq_logo_bic.png" alt="The Python Quants" width="25%">
 </p>
 
-This folder collects Jupyter notebooks and Python modules that accompany the CPF bridge topics:
+This folder collects Jupyter notebooks, Python modules, and data that
+accompany four CPF bridge topics:
 
-- covariance geometry in a two-asset world,
-- the Fundamental Theorems of Asset Pricing in finite-state markets, and
-- the Efficient Markets Hypothesis and its core empirical tests.
+- covariance geometry and portfolio risk in a two-asset world;
+- the Fundamental Theorems of Asset Pricing in finite-state markets;
+- the Efficient Markets Hypothesis and empirical tests of return
+  predictability; and
+- compounding, discounting, zero-coupon bonds, and yield curves.
 
-The materials are designed as minimal, self-contained labs that strip each theme down to its smallest nontrivial setup so you can focus on the core definitions, pictures, and pricing relations without additional modelling overhead.
+Each resource develops a focused, self-contained example of its topic. The
+materials range from mathematical demonstrations and visualizations to
+reproducible empirical diagnostics using a bundled data snapshot. They are
+designed to make core definitions and relationships concrete without requiring
+a full treatment of the corresponding specialization.
 
-## Bridge Notes
+## Bridge Topics and Code Resources
 
-The code resources here mirror the corresponding bridge notes:
+The notebooks and modules accompany the corresponding bridge notes and slides:
 
-- `covariance/covariance.ipynb` — covariance matrix geometry, ellipses, eigenvalues, and portfolio variance in a two-asset world.
-- `ftap/ftap.ipynb` — finite-state, one-period FTAP with explicit two- and three-state examples and price bounds.
-- `markets/markets.ipynb` and `markets/markets.py` — Efficient Markets Hypothesis, weak-form tests, and reusable EMH diagnostics in Python.
+- `covariance/covariance.ipynb` — covariance matrix geometry, eigenvalues,
+  covariance ellipses, and portfolio variance for two assets.
+- `ftap/ftap.ipynb` — two- and three-state, one-period markets, including
+  replication, risk-neutral probabilities, and no-arbitrage price bounds.
+- `markets/markets.ipynb` and `markets/markets.py` — the Efficient Markets
+  Hypothesis, weak-form tests, and reusable return-predictability diagnostics.
 - `yieldcurve/yieldcurve.ipynb` — returns, compounding, discounting,
-  zero-coupon and coupon bond valuation, and forward rates on an illustrative
-  curve.
-- `markets/data/eoddata.csv` and its metadata sidecar — the bundled end-of-day snapshot used for offline diagnostics.
+  zero-coupon and coupon-bond valuation, and forward rates derived from an
+  illustrative zero curve.
+- `markets/data/eoddata.csv` and `markets/data/eoddata.meta.json` — a bundled
+  end-of-day data snapshot and its source and usage metadata for offline
+  diagnostics.
 
-You can open any notebook in Jupyter or Google Colab and step through the cells alongside the associated PDF notes and slide decks.
+Open a notebook in Jupyter or Google Colab to run its examples alongside the
+associated PDF note and slide deck. The yield-curve notebook uses illustrative
+inputs; the market-efficiency materials use the bundled historical snapshot.
 
 ## Disclaimer
 
@@ -39,3 +53,4 @@ Some examples may reference third‑party libraries, datasets, services, or APIs
 - CPF Program: https://python-for-finance.com
 - The AI Engineer: https://theaiengineer.dev
 - The Crypto Engineer: https://thecryptoengineer.dev
+- The Data Scientist: https://thedatascientist.dev
